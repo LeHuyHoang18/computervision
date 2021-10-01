@@ -11,19 +11,6 @@ void StereoVision::undistortFrame(Mat& frame) {
 	undistort(frame, frame, cameraMatrix, distortionParameters, newCameraMatrix);
 	
 
-	// Can be calibrated as in the other video on the channel
-
-	/*// Precompute lens correction interpolation
-	Mat mapX, mapY;
-	undistort(K, k, cv::Matx33f::eye(), K, frameSize, CV_32FC1,
-		mapX, mapY);
-	// Show lens corrected images
-	std::cout << std::string(f) << std::endl;
-	cv::Mat img = cv::imread(f, cv::IMREAD_COLOR);
-	cv::Mat imgUndistorted;
-	// 5. Remap the image using the precomputed interpolation maps.
-	cv::remap(img, imgUndistorted, mapX, mapY, cv::INTER_LINEAR);*/
-
 }
 
 
